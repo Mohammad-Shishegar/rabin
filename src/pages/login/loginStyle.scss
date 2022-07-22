@@ -1,0 +1,126 @@
+.login {
+    background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 1),
+            rgba(0, 0, 0, 0.99),
+            rgba(0, 0, 0, 0.85),
+            rgba(26, 26, 26, 0.7)
+        ),
+        url(../../assets/image/moutain.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    .title-text {
+        padding-left: 40px;
+        color: white;
+        p:nth-child(1) {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #999999;
+        }
+        p:nth-child(2) {
+            font-size: 35px;
+            font-weight: bold;
+            display: flex;
+            margin-top: 20px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            .circle {
+                margin-bottom: 5px;
+                margin-left: 5px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #33ccff;
+                display: block;
+            }
+        }
+        p:nth-child(3) {
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 20px;
+            letter-spacing: 0.5px;
+            color: #999999;
+            span {
+                cursor: pointer;
+                color: #33ccff;
+            }
+        }
+    }
+    .input {
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 40px;
+        .email-pass {
+            display: flex;
+            flex-direction: column;
+            .warning{
+                color: red;
+                display: flex;
+                margin-left: 10px;
+                margin-top: 5px;
+                align-items: center;
+            }
+        }
+    }
+    .btns {
+        width: 450px;
+        margin-top: 25px;
+        display: flex;
+        margin-left: 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        @media screen  and (max-width : 425px){ 
+            flex-direction: column;
+        }
+        button {
+            border-radius:20px;
+            padding: 15px 45px;
+            color: white;
+            outline: none;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+            transition: all 0.4s;
+        }
+        button:nth-child(1) {
+            background-color: #595959;
+            border: 3px solid #595959;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+        button:nth-child(2) {
+            background-color: #0099ff;
+            border: 3px solid #0099ff;
+            &:hover {
+                background-color: transparent;
+                color: #0099ff;
+            }
+            &:disabled{
+                background-color: #b3b3b3;
+                border: none;
+                cursor: default;
+                &:hover {
+                    color: white;
+                }
+            }
+            @media screen  and (max-width : 425px){ 
+                margin-top: 20px;
+            }
+        }
+    }
+}
